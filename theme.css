@@ -1,0 +1,109 @@
+:root,
+.light {
+	--canvas: #ffffff;
+	--ink: #010409;
+	--primary: #023787;
+	--primary-foreground: #ffffff;
+	--muted: #e6eaef;
+	--border: #454c54;
+	--input: #454c54;
+	--muted-foreground: #454c54;
+	--subtle-foreground: color-mix(in oklch, var(--ink) 58%, var(--canvas));
+	--readback-foreground: color-mix(in oklch, var(--ink) 64%, var(--canvas));
+	--destructive: #a0111f;
+	--destructive-foreground: #ffffff;
+	--destructive-text: #960d1e;
+	--warning: #744500;
+	--warning-text: #603700;
+	--attention: #744500;
+	--success: #04591f;
+	--diff-added: #04591f;
+	--diff-removed: #960d1e;
+	--pr-merged: #622cbc;
+	--file-accent: #023b95;
+}
+.dark {
+	--canvas: #000000;
+	--ink: #ffffff;
+	--primary: #84c1ff;
+	--primary-foreground: #010409;
+	--muted: #151b23;
+	--border: #b7bdc8;
+	--input: #b7bdc8;
+	--muted-foreground: #b7bdc8;
+	--destructive: #ad0116;
+	--destructive-foreground: #ffffff;
+	--destructive-text: #ff9492;
+	--warning: #7b4900;
+	--warning-text: #f0b72f;
+	--attention: #f0b72f;
+	--success: #2bd853;
+	--diff-added: #2bd853;
+	--diff-removed: #ff9492;
+	--pr-merged: #d3abff;
+	--file-accent: #74b9ff;
+}
+:root,
+.light {
+	--ind-failed: #7a0d18;
+	--ind-input: #573400;
+	--ind-queued: #642b00;
+	--ind-working: #023787;
+	--ind-background: #4a218e;
+	--ind-plan: #044343;
+	--ind-success: #034619;
+}
+.dark {
+	--ind-failed: #ffa4a2;
+	--ind-input: #f0b72f;
+	--ind-queued: #ffa95c;
+	--ind-working: #84c1ff;
+	--ind-background: #d3acff;
+	--ind-plan: #39d0d0;
+	--ind-success: #2cd854;
+}
+[aria-label="Unread thread failed"][aria-label],
+[aria-label="Queued message failed to send"][aria-label] {
+	color: var(--ind-failed);
+}
+[aria-label="Thread needs user input"][aria-label] {
+	color: var(--ind-input);
+}
+[aria-label="Thread has a message waiting to send"][aria-label] {
+	color: var(--ind-queued);
+}
+[aria-label="Thread working"][aria-label],
+[aria-label="Thread working with unsubmitted draft"][aria-label] {
+	color: var(--ind-working);
+}
+[aria-label="Workflow running"][aria-label],
+[aria-label="Background agent running"][aria-label],
+[aria-label="Background command running"][aria-label] {
+	color: var(--ind-background);
+}
+[aria-label="Plan mode active"][aria-label],
+[aria-label="Goal active"][aria-label] {
+	color: var(--ind-plan);
+}
+[aria-label="Thread has unsubmitted draft"][aria-label] {
+	color: var(--foreground);
+}
+[aria-label="Unread thread succeeded"][aria-label] {
+	background-color: var(--ind-success);
+	width: 8px;
+	height: 8px;
+}
+[aria-label="Thread working"][aria-label],
+[aria-label="Thread working with unsubmitted draft"][aria-label],
+[aria-label="Workflow running"][aria-label],
+[aria-label="Background agent running"][aria-label],
+[aria-label="Background command running"][aria-label],
+[aria-label="Plan mode active"][aria-label],
+[aria-label="Goal active"][aria-label] {
+	opacity: 1;
+	-webkit-mask-image: none;
+	mask-image: none;
+}
+[aria-label="Thread working"][aria-label] path {
+	stroke-width: 2.5;
+}
