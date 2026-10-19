@@ -128,6 +128,17 @@
 [data-split-pane-id]:has([data-promptbox-submit-action][aria-label="Stop run"]) header.bg-surface-scrim {
 	box-shadow: inset 0 -2px 0 #9ff400;
 }
+.dark [data-thread-header-status] [aria-label="Thread working"],
+.dark
+	[data-thread-header-status]
+	[aria-label="Thread working with unsubmitted draft"],
+.dark [data-thread-header-status] [aria-label="Workflow running"],
+.dark [data-thread-header-status] [aria-label="Background agent running"],
+.dark [data-thread-header-status] [aria-label="Background command running"],
+.dark [data-thread-header-status] [aria-label="Plan mode active"],
+.dark [data-thread-header-status] [aria-label="Goal active"] {
+	color: #9ff400;
+}
 .dark [data-split-pane-id][data-focused] {
 	--canvas: #000000;
 	--background: var(--canvas);
