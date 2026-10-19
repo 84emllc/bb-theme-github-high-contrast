@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Prompt box send button: focused `#58a6ff` with obsidian text, unfocused `#e8935a` (AA orange) with obsidian text.
 - Right panel tabs: active tab filled with `--primary` and `--primary-foreground`; inactive tabs use `--muted-foreground` with a 1px `--border` outline.
 - Thread header shows a 2px bottom line in `#9ff400` (brand green) while a run is active (keyed on the Stop run button).
+- Thread header status glyph (bb 0.45.0+) renders working states (thread working, working with draft, workflow, background agent, background command, plan mode, goal) in `#9ff400` (brand green) in dark mode. Sidebar indicators and light mode keep their `--ind-*` colors.
 
 ### Changed
 

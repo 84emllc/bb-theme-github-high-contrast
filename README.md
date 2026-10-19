@@ -13,6 +13,7 @@ A custom theme for bb based on the GitHub high contrast palette, with color-code
 - Split pane title pill, prompt box border, and send button change color with pane focus: navy (`#004c7e` pill, `#58a6ff` border and button) when focused, orange (`#b54600` pill and border, `#e8935a` button) when not.
 - Fills the active right-panel tab with `--primary` and outlines inactive tabs with `--border`.
 - Underlines the thread header in brand green `#9ff400` while a run is active.
+- Colors the thread header status glyph (bb 0.45.0+) in brand green `#9ff400` for working states in dark mode (14.1:1 on the focused pane, 15.4:1 on black). Other header states and light mode use the indicator colors below.
 - Sets `--border-seam`, `--border-hairline`, and `--sidebar-border` to `--border`, so pane seams and separators match the high contrast component borders.
 
 ## Indicator colors
@@ -56,7 +57,7 @@ After editing `theme.css`, run `bb theme set github-high-contrast` again to re-a
 - Contrast is measured against the plain canvas. A selected sidebar row carries a primary tint, so contrast there is lower.
 - Animated indicators no longer shimmer, because the shine effect is an opacity mask. The working spinner still rotates.
 - An idle draft icon can render without an `aria-label`, in which case it keeps the stock color.
-- The pane, tab, prompt box, and working-state rules select on bb's internal `data-split-pane-id`, `data-focused`, `data-pane-header-focus-tab`, `data-secondary-panel-tab-content`, `group/tab-pill`, `aria-pressed`, `data-promptbox`, `data-promptbox-send-menu`, and the `Stop run` button label. The unfocused title pill has no data hook and is matched structurally. Only the working state is detectable from the thread window today; see https://github.com/84emllc/bb/issues/33 for exposing the other states.
+- The pane, tab, prompt box, and working-state rules select on bb's internal `data-split-pane-id`, `data-focused`, `data-pane-header-focus-tab`, `data-secondary-panel-tab-content`, `group/tab-pill`, `aria-pressed`, `data-promptbox`, `data-promptbox-send-menu`, `data-thread-header-status`, and the `Stop run` button label. The unfocused title pill has no data hook and is matched structurally. bb 0.45.0 exposes every thread state in the thread window (https://github.com/84emllc/bb/issues/33), but the active-run underline still keys on the `Stop run` button because `data-thread-status` reports only the highest-priority state.
 - The compact (narrow viewport) panel shelf uses different markup and keeps the stock tab styling.
 - Pane focus colors apply to the outer pane wrapper only. Popovers and menus render outside the pane and keep the root palette. A single open thread is always focused.
 - The brand green working line is 1.4:1 on a white canvas, so it is faint in light mode.
