@@ -9,11 +9,12 @@ A custom theme for bb based on the GitHub high contrast palette, with color-code
 - Gives every sidebar thread indicator its own color. Stock bb renders most of them in muted grey.
 - Removes the opacity mask from animated indicators so they always render at full color.
 - Enlarges the unread-success dot from 5px to 8px and thickens the working spinner stroke from 1.5 to 2.5.
-- Colors thread panes by focus with 84EM brand colors (dark mode): focused pane on obsidian `#090e1e`, unfocused panes on black with slate-500 borders.
+- Colors thread panes by focus with 84EM brand colors (dark mode): focused pane on obsidian `#090e1e`, unfocused panes on black with slate-500 borders. A thread shown as the only pane (phones, the mobile app, or one pane on desktop) counts as focused.
 - Split pane title pill, prompt box border, and send button change color with pane focus: navy (`#004c7e` pill, `#58a6ff` border and button) when focused, orange (`#b54600` pill and border, `#e8935a` button) when not.
-- Fills the active right-panel tab with `--primary` and outlines inactive tabs with `--border`.
+- Fills the active right-panel tab with `--primary` and outlines inactive tabs with `--border`, on the desktop tab strip and (bb 0.46.0+) the phone tab pager.
 - Underlines the thread header in brand green `#9ff400` while a run is active.
 - Colors the thread header status glyph (bb 0.45.0+) in brand green `#9ff400` for working states in dark mode (14.1:1 on the focused pane, 15.4:1 on black). Other header states and light mode use the indicator colors below.
+- Colors sidebar project and Pinned section titles in brand orange (bb 0.46.0+): `#b54600` in light mode (5.17:1 on the sidebar), `#e8935a` in dark mode (8.74:1).
 - Sets `--border-seam`, `--border-hairline`, and `--sidebar-border` to `--border`, so pane seams and separators match the high contrast component borders.
 
 ## Indicator colors
