@@ -114,6 +114,14 @@
 	--border-hairline: var(--border);
 	--sidebar-border: var(--border);
 }
+[data-sidebar-section-kind="project"] [data-sidebar-section-title],
+[data-sidebar-section-kind="pinned"] [data-sidebar-section-title] {
+	color: #b54600;
+}
+.dark [data-sidebar-section-kind="project"] [data-sidebar-section-title],
+.dark [data-sidebar-section-kind="pinned"] [data-sidebar-section-title] {
+	color: #e8935a;
+}
 [data-secondary-panel-tab-content] .group\/tab-pill:has([aria-pressed="true"]) {
 	background-color: var(--primary);
 	color: var(--primary-foreground);
@@ -139,7 +147,8 @@
 .dark [data-thread-header-status] [aria-label="Goal active"] {
 	color: #9ff400;
 }
-.dark [data-split-pane-id][data-focused] {
+.dark [data-split-pane-id][data-focused],
+.dark [data-split-pane-id]:not([data-focused], [data-focused] [data-split-pane-id]) {
 	--canvas: #000000;
 	--background: var(--canvas);
 	--card: var(--canvas);
@@ -149,7 +158,8 @@
 	--surface-raised-solid: color-mix(in oklab, var(--ink) 2.5%, var(--canvas));
 	background-color: var(--canvas);
 }
-.dark [data-split-pane-id][data-focused="true"] {
+.dark [data-split-pane-id][data-focused="true"],
+.dark [data-split-pane-id]:not([data-focused], [data-focused] [data-split-pane-id]) {
 	--canvas: #090e1e;
 }
 [data-split-pane-id][data-focused="true"] header.bg-surface-scrim [data-pane-header-focus-tab] {
@@ -173,7 +183,8 @@
 	--sidebar-border: #5e7089;
 	--border-seam-vertical: #5e7089;
 }
-[data-split-pane-id][data-focused="true"] [data-promptbox] {
+[data-split-pane-id][data-focused="true"] [data-promptbox],
+[data-split-pane-id]:not([data-focused], [data-focused] [data-split-pane-id]) [data-promptbox] {
 	border-color: #58a6ff;
 	border-width: 2px;
 }
@@ -182,7 +193,9 @@
 	border-width: 2px;
 }
 [data-split-pane-id][data-focused="true"] [data-promptbox] [data-promptbox-send-menu],
-[data-split-pane-id][data-focused="true"] [data-promptbox] [data-promptbox-submit-action][type="submit"] {
+[data-split-pane-id][data-focused="true"] [data-promptbox] [data-promptbox-submit-action][type="submit"],
+[data-split-pane-id]:not([data-focused], [data-focused] [data-split-pane-id]) [data-promptbox] [data-promptbox-send-menu],
+[data-split-pane-id]:not([data-focused], [data-focused] [data-split-pane-id]) [data-promptbox] [data-promptbox-submit-action][type="submit"] {
 	background-color: #58a6ff;
 	color: #090e1e;
 }
